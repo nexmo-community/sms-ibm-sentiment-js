@@ -1,4 +1,4 @@
-/* Simple Emotion Analysis Demo: 
+/* Simple Emotion Analysis Demo:
  * Read incoming SMS messages and have Watson to analyze the messages
  */
 
@@ -37,8 +37,6 @@ let tone_analyzer = watson.tone_analyzer({
   version: process.env.WATSON_TONE_ANALYSIS_VERSION,
   version_date: '2016-05-19'
 });
-
-const confidencethreshold = 0.5;
 
 function analyzeTone(params) {
   let text = params.text;
