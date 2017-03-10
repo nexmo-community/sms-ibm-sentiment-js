@@ -2,9 +2,7 @@
 
 This is a demo that shows you how to have IBM Watson Watson to read the emotion of SMS messages in Node.js.
 
-![Watson analysis](https://github.com/nexmo-community/sms-sentiment/blob/master/sms.png)
-
-![Watson analysis](https://github.com/nexmo-community/sms-sentiment/blob/master/emotion-analysis.png)
+![Watson analysis](https://github.com/nexmo-community/sms-sentiment-watson/blob/master/sms.png?raw=true)
 
 ### Prerequisites
 
@@ -50,5 +48,7 @@ $ nf start
 
 Then try sending some messages to your Nexmo number that associated with your API keys, and see the `console.log` on terminal!
 
-![Watson analysis](https://github.com/nexmo-community/sms-sentiment/blob/master/emotion-analysis.png)
+![Watson analysis](https://github.com/nexmo-community/sms-sentiment-watson/blob/master/emotion-analysis.png?raw=true)
+
+
 
