@@ -6,7 +6,7 @@ This is a demo that shows you how to have IBM Watson Watson to read the emotion 
 
 ### Prerequisites
 
-You need a [Nexmo account](https://dashboard.nexmo.com/) and set up the webhook endpoint to `https://yoour-server/message`. To learn how to set and one and receive SMS message, please read the tutorial, [How to Receive SMS Messages with Node.js and Express](https://www.nexmo.com/blog/2016/10/27/receive-sms-messages-node-js-express-dr/).
+You need a [Nexmo account](https://dashboard.nexmo.com/) and set up the webhook endpoint to `https://your-server/message`. To learn how to set and one and receive SMS message, please read the tutorial, [How to Receive SMS Messages with Node.js and Express](https://www.nexmo.com/blog/2016/10/27/receive-sms-messages-node-js-express-dr/).
 
 You also need an [IBM Bluemix](https://console.ng.bluemix.net) account and add the [Watson Tone Analyzer](https://console.ng.bluemix.net/services/tone_analyzer/cbe7a324-0794-46d3-a6be-db4e58604273/?paneId=manage). You will be required the service credentials later.
 
