@@ -1,7 +1,7 @@
 {
   "name": "SMS Sentiment Analysis with Nexmo & IBM Watson Tone Analysis",
   "description": "Example using IBM Watson Tone Analysis to analyze SMS messages and determine the sentiment of the text.",
-  "keywords": ["sentiment analysis", "sms", "nodejs", "IBM Watson", "nexmo"],
+  "keywords": ["sentiment analysis", "sms", "nodejs", "IBM Tone Analyzer", "nexmo"],
   "website": "https://developer.nexmo.com/extend/ibm-watson-speech-to-text",
   "repository": "https://github.com/nexmo-community/voice-microsoft-speechtotext",
   "env": {

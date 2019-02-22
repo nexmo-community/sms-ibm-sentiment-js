@@ -1,0 +1,5 @@
+---
+applications:
+- name:    sms-sentiment-watson
+  random-route: true
+  memory:  128M
