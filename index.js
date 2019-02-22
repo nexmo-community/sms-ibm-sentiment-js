@@ -47,9 +47,6 @@ function analyzeTone(params) {
       console.log(err);
     } else {
       console.log(tone.document_tone.tones);
-      tone.document_tone.tones.forEach((tone) => {
-        console.log(tone.tone_name);
-      })
     }
   });
 }
