@@ -4,13 +4,19 @@
 
 'use strict';
 
+require('dotenv').config();
+
 const express = require('express');
 const bodyParser = require('body-parser');
+const ToneAnalyzerV3 = require('watson-developer-cloud/tone-analyzer/v3');
+
+
 const app = express();
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-const server = app.listen(process.env.PORT || 5000, () => {
+const server = app.listen(process.env.PORT || 3000, () => {
   console.log('Express server listening on port %d in %s mode', server.address().port, app.settings.env);
 });
 
@@ -28,28 +34,23 @@ app.post('/message', (req, res) => {
 });
 
 // IBM Watson Tone Analysis
-
-const watson = require('watson-developer-cloud');
-
-let tone_analyzer = watson.tone_analyzer({
-  username: process.env.WATSON_TONE_ANALYSIS_USERNAME,
-  password: process.env.WATSON_TONE_ANALYSIS_PASSWORD,
-  version: process.env.WATSON_TONE_ANALYSIS_VERSION,
-  version_date: '2016-05-19'
+var toneAnalyzer = new ToneAnalyzerV3({
+  iam_apikey: process.env.TONE_ANALYZER_IAM_APIKEY,
+  url: process.env.TONE_ANALYZER_URL,
+  version: '2017-09-21'
 });
 
 function analyzeTone(params) {
   let text = params.text;
   let number = params.msisdn;
 
-  tone_analyzer.tone({text: text}, (err, tone) => {
+  toneAnalyzer.tone({text: text}, (err, tone) => {
     if (err) {
       console.log(err);
     } else {
-      tone.document_tone.tone_categories.forEach((tonecategory) => {
-        if(tonecategory.category_id === 'emotion_tone'){
-          console.log(tonecategory.tones);
-        }
+      console.log(tone.document_tone.tones);
+      tone.document_tone.tones.forEach((tone) => {
+        console.log(tone.tone_name);
       })
     }
   });
