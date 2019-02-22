@@ -23,8 +23,6 @@ const server = app.listen(process.env.PORT || 3000, () => {
 // Reading the onbound SMS messages
 app.post('/message', (req, res) => {
   let params = req.body;
-  console.log(params);
-
   if (!params.to || !params.msisdn) {
     console.log('This is not a valid inbound SMS message!');
   } else {
