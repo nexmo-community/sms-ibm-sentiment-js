@@ -4,7 +4,7 @@ nexmo link:sms 12012790530 https://kellyjandrews.ngrok.com/message
 
 # SMS Sentiment Analysis with IBM Tone Analyzer
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://nexmo.dev/ibm-nexmo-sms-analysis-heroku) [![Remix on Glitch](https://cdn.glitch.com/2703baf2-b643-4da7-ab91-7ee2a2d00b5b%2Fremix-button.svg)](https://nexmo.dev/ibm-nexmo-sms-analysis-glitchremix)
+[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.svg)](https://nexmo.dev/ibm-nexmo-sms-analysis-heroku) [![Remix on Glitch](https://cdn.glitch.com/2703baf2-b643-4da7-ab91-7ee2a2d00b5b%2Fremix-button.svg)](https://nexmo.dev/ibm-nexmo-sms-analysis-glitchremix) [![Deploy to IBM Cloud](https://cloud.ibm.com/devops/setup/deploy/button.png)](https://nexmo.dev/ibm-nexmo-sms-analysis-ibmcloud)
 
 This example uses IBM Tone Analyzer to analyze SMS messages and determine the sentiment of the text.
 
@@ -13,6 +13,10 @@ SMS Messages sent through Nexmo will be sent to IBM Tone Analyzer and a series o
 ## IBM Tone Analyzer Service
 
 You will need to sign up for the [IBM Tone Analyzer service](https://console.bluemix.net/catalog/services/tone-analyzer). Once created, make a note of the API Key and URL for use later.
+
+```
+Note for IBM Cloud deploy: Once the app has deployed, you will need to go to the app dashboard and update the environment variables with these credentials under "Runtime > Environment Variables"
+```
 
 ## Running the App
 
