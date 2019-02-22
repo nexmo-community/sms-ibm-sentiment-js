@@ -1,7 +1,3 @@
-nexmo number:buy --country_code US
-nexmo link:sms 12012790530 https://kellyjandrews.ngrok.com/message
-
-
 # SMS Sentiment Analysis with IBM Tone Analyzer
 
 [![Deploy to Heroku](https://www.herokucdn.com/deploy/button.svg)](https://nexmo.dev/ibm-nexmo-sms-analysis-heroku) [![Remix on Glitch](https://cdn.glitch.com/2703baf2-b643-4da7-ab91-7ee2a2d00b5b%2Fremix-button.svg)](https://nexmo.dev/ibm-nexmo-sms-analysis-glitchremix) [![Deploy to IBM Cloud](https://cloud.ibm.com/devops/setup/deploy/button.png)](https://nexmo.dev/ibm-nexmo-sms-analysis-ibmcloud)
