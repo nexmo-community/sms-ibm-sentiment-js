@@ -2,7 +2,7 @@
 applications:
 - name:    sms-sentiment-watson
   random-route: true
-  command: node server.js
+  command: node index.js
   memory:  128M
   env:
     TONE_ANALYZER_IAM_APIKEY:
