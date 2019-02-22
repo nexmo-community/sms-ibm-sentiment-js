@@ -10,9 +10,11 @@ SMS Messages sent through Nexmo will be sent to IBM Tone Analyzer and a series o
 
 You will need to sign up for the [IBM Tone Analyzer service](https://console.bluemix.net/catalog/services/tone-analyzer). Once created, make a note of the API Key and URL for use later.
 
-```
-Note for IBM Cloud deploy: Once the app has deployed, you will need to go to the app dashboard and update the environment variables with these credentials under "Runtime > Environment Variables"
-```
+---
+
+**Note for IBM Cloud deploy**: Once the app has deployed, you will need to go to the app dashboard and update the environment variables with these credentials under "Runtime > Environment Variables"
+
+---
 
 ## Running the App
 
