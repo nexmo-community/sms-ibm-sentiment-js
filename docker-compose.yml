@@ -1,0 +1,10 @@
+version: '3.7'
+services:
+  sms-sentiment:
+    build: .
+    env_file: .env
+    ports:
+      - 5000:5000
+    volumes:
+      - ./:/usr/src
+      - ./node_modules:/usr/src/node_modules
