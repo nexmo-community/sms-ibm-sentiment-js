@@ -16,6 +16,7 @@
     "body-parser": "1.18.3",
     "dotenv": "^6.2.0",
     "express": "4.16.4",
-    "ibm-watson": "4.2.1"
+    "ibm-watson": "4.2.1",
+    "nexmo-cli": "0.3.13"
   }
 }
