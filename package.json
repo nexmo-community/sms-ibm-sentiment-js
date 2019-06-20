@@ -8,13 +8,14 @@
   },
   "contributors": [
     "Tomomi Imura",
-    "Kelly Andrews <kelly.andrews@nexmo.com> (http://www.twitter.com/kellyjandrews)"
+    "Kelly Andrews <kelly.andrews@nexmo.com> (http://www.twitter.com/kellyjandrews)",
+    "Adam Culp <adam.culp@vonage.com> (http://www.twitter.com/adamculp)"
   ],
   "license": "MIT",
   "dependencies": {
     "body-parser": "1.18.3",
     "dotenv": "^6.2.0",
     "express": "4.16.4",
-    "watson-developer-cloud": "3.18.1"
+    "ibm-watson": "4.2.1"
   }
 }

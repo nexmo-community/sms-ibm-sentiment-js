@@ -8,7 +8,7 @@ require('dotenv').config();
 
 const express = require('express');
 const bodyParser = require('body-parser');
-const ToneAnalyzerV3 = require('watson-developer-cloud/tone-analyzer/v3');
+const ToneAnalyzerV3 = require('ibm-watson/tone-analyzer/v3');
 
 
 const app = express();
