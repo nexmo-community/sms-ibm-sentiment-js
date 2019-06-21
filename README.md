@@ -65,7 +65,7 @@ For this example app a Nexmo number and SMS webhook setup is needed.
 
 This can be achieved with the Nexmo CLI. Install the CLI by following [these instructions](https://github.com/Nexmo/nexmo-cli#installation).
 
-IMPORTANT: In the Nexmo dashboard, navigate to Settings, and set the HTTP Method to `POST-JSON` for the APIKey.
+IMPORTANT: In the Nexmo dashboard, navigate to Settings, and set the HTTP Method to `POST-JSON` for the APIKey being used.
 
 ### Rent a New Virtual Number
 
