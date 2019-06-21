@@ -39,14 +39,16 @@ var toneAnalyzer = new ToneAnalyzerV3({
 });
 
 function analyzeTone(params) {
-  let text = params.text;
-  let number = params.msisdn;
+  let toneParams = {
+    tone_input: { 'text': params.text},
+    content_type: 'application/json',
+  };
 
-  toneAnalyzer.tone({text: text}, (err, tone) => {
-    if (err) {
-      console.log(err);
-    } else {
-      console.log(tone.document_tone.tones);
-    }
-  });
+  toneAnalyzer.tone(toneParams)
+      .then(toneAnalyzer => {
+        console.log(JSON.stringify(toneAnalyzer, null, 2));
+      })
+      .catch(err => {
+        console.log('error', err);
+      });
 }
