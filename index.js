@@ -21,8 +21,15 @@ const server = app.listen(process.env.PORT || 3000, () => {
 });
 
 // Reading the onbound SMS messages
-app.post('/message', (req, res) => {
+// Using all here to allow for GET, POST or POST-JSON from https://dashboard.nexmo.com/settings
+app.all('/message', (req, res) => {
+
   let params = req.body;
+
+  if (req.method === "GET") {
+    params = req.query
+  }
+
   if (!params.to || !params.msisdn) {
     console.log('This is not a valid inbound SMS message!');
   } else {
