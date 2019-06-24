@@ -20,7 +20,7 @@ const server = app.listen(process.env.PORT || 3000, () => {
   console.log('Express server listening on port %d in %s mode', server.address().port, app.settings.env);
 });
 
-// Reading the onbound SMS messages
+// Reading the inbound SMS messages
 // Using all here to allow for GET, POST or POST-JSON from https://dashboard.nexmo.com/settings
 app.all('/message', (req, res) => {
 
