@@ -21,8 +21,7 @@ const server = app.listen(process.env.PORT || 3000, () => {
 });
 
 // Reading the inbound SMS messages
-// Using all here to allow for GET, POST or POST-JSON from https://dashboard.nexmo.com/settings
-app.all('/message', (req, res) => {
+const handleRoute = (req, res) => {
 
   let params = req.body;
 
@@ -36,7 +35,13 @@ app.all('/message', (req, res) => {
     analyzeTone(params);
   }
   res.status(200).end();
-});
+};
+
+// Using route here to allow for GET or POST from https://dashboard.nexmo.com/settings
+app.route('/message')
+  .get(handleRoute)
+  .post(handleRoute)
+
 
 // IBM Watson Tone Analysis
 var toneAnalyzer = new ToneAnalyzerV3({
