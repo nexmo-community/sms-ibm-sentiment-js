@@ -40,8 +40,8 @@ const handleRoute = (req, res) => {
 // Using route here to allow for GET or POST from https://dashboard.nexmo.com/settings
 app.route('/message')
   .get(handleRoute)
-  .post(handleRoute);
-  .all( (req, res) => res.status(405).send());
+  .post(handleRoute)
+  .all((req, res) => res.status(405).send());
 
 // IBM Watson Tone Analysis
 var toneAnalyzer = new ToneAnalyzerV3({
