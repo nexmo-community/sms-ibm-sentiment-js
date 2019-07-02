@@ -30,11 +30,12 @@ const handleRoute = (req, res) => {
   }
 
   if (!params.to || !params.msisdn) {
-    console.log('This is not a valid inbound SMS message!');
+    res.status(400).send({'error': 'This is not a valid inbound SMS message!'});
   } else {
     analyzeTone(params);
+    res.status(200).end();
   }
-  res.status(200).end();
+
 };
 
 // Using route here to allow for GET or POST from https://dashboard.nexmo.com/settings
