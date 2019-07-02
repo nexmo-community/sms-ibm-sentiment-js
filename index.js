@@ -17,19 +17,32 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 const server = app.listen(process.env.PORT || 3000, () => {
-  console.log('Express server listening on port %d in %s mode', server.address().port, app.settings.env);
+  console.log(`Express server listening on port ${server.address().port} in ${app.settings.env} mode`);
 });
 
-// Reading the onbound SMS messages
-app.post('/message', (req, res) => {
+// Reading the inbound SMS messages
+const handleRoute = (req, res) => {
+
   let params = req.body;
+
+  if (req.method === "GET") {
+    params = req.query
+  }
+
   if (!params.to || !params.msisdn) {
-    console.log('This is not a valid inbound SMS message!');
+    res.status(400).send({'error': 'This is not a valid inbound SMS message!'});
   } else {
     analyzeTone(params);
+    res.status(200).end();
   }
-  res.status(200).end();
-});
+
+};
+
+// Using route here to allow for GET or POST from https://dashboard.nexmo.com/settings
+app.route('/message')
+  .get(handleRoute)
+  .post(handleRoute)
+  .all((req, res) => res.status(405).send());
 
 // IBM Watson Tone Analysis
 var toneAnalyzer = new ToneAnalyzerV3({
